@@ -1,5 +1,4 @@
 let pays = prompt("entrer un nom de pays")
-
 let conv = pays.toLowerCase()
 let item1 = document.getElementById("item-1")
 let item2 = document.getElementById("item-2")
@@ -10,6 +9,18 @@ if (conv == "cameroun" || pays =="cameroun"){
     item1.style.backgroundColor= "green"
     item2.style.backgroundColor= "red"
     star.style.backgroundColor = "yellow"
+    star.animate(
+        [
+            {transform : "translateY (20px)"},
+            {transform : "translateY(500px)"},
+            {transform : "translateY(-500px)"}
+
+        ],
+        {
+            duration : 1000,
+            iterations : Infinity
+        }
+    )
     item3.style.backgroundColor= "yellow"
 
 }
